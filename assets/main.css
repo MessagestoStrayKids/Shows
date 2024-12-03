@@ -50,9 +50,10 @@ body {
 	table tr td{ border: 1px solid white;}
 table{
 		margin-left:0px;
+		.mytable tr > *:nth-child(1) { width:5%; }
 margin-right:auto;}
-td.box{ width: 1%;
-}
+.mytable tr > *:nth-child(1) { width:5%; }
+
 	@media only screen and (max-width: 767px) {
 		body {
 		  	background-image: url('https://i.ibb.co/GdFQ0Cg/background-HOPmobile.jpg');
