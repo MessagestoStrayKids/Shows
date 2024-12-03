@@ -51,7 +51,7 @@ body {
 table{
 		margin-left:0px;
 margin-right:auto;}
-tablr.box tr > *:nth-child(1) { width:1%; }
+table.box tr > *:nth-child(1) { width:1%; }
 
 	@media only screen and (max-width: 767px) {
 		body {
