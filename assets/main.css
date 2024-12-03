@@ -47,9 +47,9 @@ body {
 		font-size: 26px;
 		text-align: left;
 		}
-	table tr td{ border-bottom: 1px solid white; border-left: 1px solid white;}
+	table tr td{ border-all: 1px solid white;}
 table{
-		align: left;}
+		margin-left:0px}
 
 	@media only screen and (max-width: 767px) {
 		body {
