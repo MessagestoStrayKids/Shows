@@ -4,18 +4,9 @@ body {
 		background-size: cover;
 		line-height: 1.0;
 		}
-ul {
-		list-style-type: none;
-		padding-left: 30px;
+	ul {
+ 		list-style: none;
 		}
-		li {
-		color: rgba(67, 67, 67, 1);
-		}
-		img {
-		max-width: 100%;
-		height: auto;
-		}
-
 	a {
 		color: inherit;
 		}
@@ -56,9 +47,7 @@ ul {
 		font-size: 26px;
 		text-align: left;
 		}
-table tr td{
-		border-bottom: 1px solid white;
-		border-left: 1px solid white;}
+	table tr td{ border-bottom: 1px solid white; border-left: 1px solid white;}
 	@media only screen and (max-width: 767px) {
 		body {
 		  	background-image: url('https://i.ibb.co/GdFQ0Cg/background-HOPmobile.jpg');
