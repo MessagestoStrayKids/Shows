@@ -47,11 +47,6 @@ body {
 		font-size: 26px;
 		text-align: left;
 		}
-	table tr td{ border: 1px solid white; margin-left:0px;}
-table{
-		margin-left:0px;
-margin-right:auto;}
-table.box tr > *:nth-child(1) { width:1%; }
 
 	@media only screen and (max-width: 767px) {
 		body {
