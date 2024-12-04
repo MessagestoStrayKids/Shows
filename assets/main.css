@@ -1,9 +1,7 @@
 body {
-        background-position: inherit;
-        background-image: inherit;
-        background-size: inherit;
         background-attachment: inherit;
-        background-repeat: inherit;
+        background-repeat: no-repeat;
+		background-size: cover;
         position: fixed;
 }
 	ul {
