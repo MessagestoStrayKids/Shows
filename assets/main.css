@@ -1,9 +1,5 @@
-body {
-        	background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-size: cover;
-		line-height: 1.0;
-}
+
+
 	ul {
  		list-style: none;
 		}
@@ -48,22 +44,41 @@ body {
 		text-align: left;
 		}
 
+@supports not (-webkit-touch-callout: none) {
+  /* CSS for other than iOS devices */ 
+	body {
+        	background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		line-height: 1.0;
+}
+}
+
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */ 
+	body {
+	background-color: black;
+	background-attachment: scroll;
+	}
+}
 
 	@media only screen and (max-width: 767px) {
 		body {
 			 background-image: 
-				 url('https://i.ibb.co/GdFQ0Cg/background-HOPmobile.jpg'), linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
+				 url('https://i.ibb.co/GdFQ0Cg/background-HOPmobile.jpg');
 		}
 		}
 	@media only screen and (min-width: 767px) {
 		body {
  			background-image:
-				url('https://i.ibb.co/Dw5RfNT/background-HOP.jpg'), linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
+				url('https://i.ibb.co/Dw5RfNT/background-HOP.jpg');
 		}
 		h3 {
 		display:inline;	
 		}
 		}
+
+
 		table{
 		border-collapse: seperate;
 		border-spacing: 0px;
