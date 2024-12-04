@@ -1,5 +1,16 @@
 body {
-
+  selector:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-position: inherit;
+        background-image: inherit;
+        background-size: inherit;
+        background-attachment: inherit;
+        background-repeat: inherit;
+        position: fixed;
+        top: 0;
+        z-index: -1;
 }
 	ul {
  		list-style: none;
@@ -45,21 +56,6 @@ body {
 		text-align: left;
 		}
 
-@media all and (max-width:1980px) {
-    selector:after {
-        content: '';
-        width: 100%;
-        height: 100%;
-        background-position: inherit;
-        background-image: inherit;
-        background-size: inherit;
-        background-attachment: inherit;
-        background-repeat: inherit;
-        position: fixed;
-        top: 0;
-        z-index: -1;
-    }
-}
 
 	@media only screen and (max-width: 767px) {
 		body {
