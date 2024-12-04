@@ -1,7 +1,8 @@
 body {
-        background-repeat: no-repeat;
+        	background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
+		background-color: black;
 		line-height: 1.0;
 }
 	ul {
