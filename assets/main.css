@@ -1,8 +1,8 @@
 body {
-        background-attachment: inherit;
         background-repeat: no-repeat;
+		background-attachment: fixed;
 		background-size: cover;
-        position: fixed;
+		line-height: 1.0;
 }
 	ul {
  		list-style: none;
