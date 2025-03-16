@@ -250,7 +250,6 @@ header {
 	margin: 0 auto; 
 	justify-content: center;
 	text-align: center;
-	background-color: yellow;
 }
 
 main {
@@ -258,5 +257,4 @@ main {
 	margin: 0 auto;  
 	justify-content: center;
 	text-align: center;
-  	background-color: blue;
 }
