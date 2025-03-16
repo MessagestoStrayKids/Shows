@@ -278,3 +278,15 @@
 	z-index: 1;
 }
 
+#main > .inner {
+	--padding-horizontal: 3rem;
+	--padding-vertical: 3rem;
+	--spacing: 0.75rem;
+	--width: 70rem;
+	border-radius: var(--border-radius-tl) var(--border-radius-tr) var(--border-radius-br) var(--border-radius-bl);
+	max-width: 100%;
+	position: relative;
+	width: var(--width);
+	z-index: 1;
+	padding: var(--padding-vertical) var(--padding-horizontal);
+}
