@@ -188,7 +188,10 @@
 		  padding: 0.2em .6em;
 		  border: none;
 		  outline: none;
-		  color: rgb(255, 255, 255);
+		  color: #FFFFFF;
+		font-family: 'Bakbak One';
+		font-size: 24px;
+		text-align: center;
 		  background: #111;
 		  cursor: pointer;
 		  position: relative;
