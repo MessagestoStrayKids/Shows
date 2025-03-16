@@ -59,7 +59,7 @@
 		}
 	h3 {
 		border-radius: 25px;
-		padding: 20px;
+		padding: 1px 24px;;
 		background: linear-gradient(45deg, rgba(94, 255, 255, 1) 5%, rgba(24, 75, 140, 1) 90%);
 		box-shadow: 0 12px 16px 0 rgba(255, 255, 255,0.24), 0 17px 50px 0 rgba(255, 255, 255,0.19);
 		color: #FFFFFF;
