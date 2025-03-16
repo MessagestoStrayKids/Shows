@@ -172,14 +172,13 @@
 		.dropdown:hover .dropbtn {background-color: rgba(230, 110, 135, 1);}
 
 		.button-85 {
-		  padding: 0.2em .6em;
+		  padding: 0.2em 0.2em;
 		  border: none;
 		  outline: none;
 		  color: #FFFFFF;
 		font-family: 'Bakbak One';
 		font-size: 24px;
 		text-align: center;
-		margin: 40px 10px 40px;
 		  background: #111;
 		  cursor: pointer;
 		  position: relative;
@@ -194,15 +193,9 @@
 		  content: "";
 		  background: linear-gradient(
 		    45deg,
-		    #ff0000,
-		    #ff7300,
-		    #fffb00,
-		    #48ff00,
-		    #00ffd5,
-		    #002bff,
-		    #7a00ff,
-		    #ff00c8,
-		    #ff0000
+		    rgba(94, 255, 255 1),
+		    rgba(24, 75, 140, 1),
+		    rgba(230, 110, 135, 1)
 		  );
 		  position: absolute;
 		  top: -2px;
