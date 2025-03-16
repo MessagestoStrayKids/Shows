@@ -202,15 +202,9 @@ font-family: 'Bakbak One';
 		  content: "";
 		  background: linear-gradient(
 		    45deg,
-		    #ff0000,
-		    #ff7300,
-		    #fffb00,
-		    #48ff00,
-		    #00ffd5,
-		    #002bff,
-		    #7a00ff,
-		    #ff00c8,
-		    #ff0000
+		    #5effff,
+		    #184b8c,
+		    #e66e87
 		  );
 		  position: absolute;
 		  top: -2px;
