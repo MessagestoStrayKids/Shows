@@ -26,9 +26,6 @@
 		body {
  			background-image: url('https://i.ibb.co/D8yWF25/background-SKZOclock.jpg');
 		}
-		h3 {
-		display:inline;	
-		}
 		}
 
 
@@ -57,7 +54,7 @@
 		font-style: Bold;
 		font-size: 36px;
 		}
-	h3 {
+	.button1 {
 		border-radius: 25px;
 		padding: 1px 24px;;
 		background: linear-gradient(45deg, rgba(94, 255, 255, 1) 5%, rgba(24, 75, 140, 1) 90%);
