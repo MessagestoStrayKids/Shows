@@ -33,7 +33,6 @@
 	ul {
  		list-style: none;
 		}
-
 	a {
 		color: inherit;
 		}
@@ -54,6 +53,15 @@
 		font-family: 'Bakbak One';
 		font-style: Bold;
 		font-size: 36px;
+		}
+	h3 {
+		border-radius: 25px;
+		background: linear-gradient(45deg, rgba(94, 255, 255, 1) 5%, rgba(24, 75, 140, 1) 90%);
+		color: #FFFFFF;
+		font-family: 'Bakbak One';
+		font-size: 24px;
+		padding: 10px;
+		text-align: center;
 		}
 	h4 {
 		border-bottom: 2px solid rgba(254, 0, 0, 1);
@@ -134,44 +142,44 @@
 		margin-bottom: 3%;
 		}
 
-		.dropbtn {
-		  background-color: rgba(24, 75, 140, 1);
-		  color: white;
-		  font-family: 'Bakbak One';
-		font-style: Bold;
-		font-size: 26px;
-		  border: none;
-		}
-		
-		.dropdown {
-		  position: relative;
-		  display: inline-block;
-		}
-		
-		.dropdown-content {
-		  display: none;
-		  position: absolute;
-		  background-color: black;
-		  min-width: 160px;
-		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-		  z-index: 1;
-		}
-		
-		.dropdown-content a {
-		  color: rgba(94, 255, 255, 1);
-		  padding: 12px 16px;
-		font-family: 'Bakbak One';
-		  text-decoration: none;
-		  display: block;
-		}
-		
-		.dropdown:hover .dropdown-content {display: block;}
-		
-		.dropdown-content a:hover {background-color: rgba(230, 110, 135, 1);}
-		
-		.dropdown:hover .dropbtn {background-color: rgba(230, 110, 135, 1);}
+.dropbtn {
+  background-color: rgba(24, 75, 140, 1);
+  color: white;
+  font-family: 'Bakbak One';
+font-style: Bold;
+font-size: 26px;
+  border: none;
+}
 
-		.button-85 {
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgba(94, 255, 255, 1);
+  padding: 12px 16px;
+font-family: 'Bakbak One';
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown-content a:hover {background-color: rgba(230, 110, 135, 1);}
+
+.dropdown:hover .dropbtn {background-color: rgba(230, 110, 135, 1);}
+
+.button-85 {
 		  padding: 0.2em 0.2em;
 		  border: none;
 		  outline: none;
@@ -193,9 +201,15 @@
 		  content: "";
 		  background: linear-gradient(
 		    45deg,
-		    rgba(94, 255, 255 1),
-		    rgba(24, 75, 140, 1),
-		    rgba(230, 110, 135, 1)
+		    #ff0000,
+		    #ff7300,
+		    #fffb00,
+		    #48ff00,
+		    #00ffd5,
+		    #002bff,
+		    #7a00ff,
+		    #ff00c8,
+		    #ff0000
 		  );
 		  position: absolute;
 		  top: -2px;
@@ -234,9 +248,6 @@
 		  top: 0;
 		  border-radius: 10px;
 		}
-
-
-/*----*/
 
 #wrapper {
 	-webkit-overflow-scrolling: touch;
