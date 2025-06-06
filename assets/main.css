@@ -47,7 +47,7 @@
 		}
 	h1 {
 		text-align: center;
-		background: linear-gradient(45deg, rgba(94, 255, 255, 1) 5%, rgba(24, 75, 140, 1) 90%);
+		background-image: url("https://pbs.twimg.com/profile_images/1915601666092785668/tY_n9v2q_400x400.jpg"); /*background: linear-gradient(45deg, rgba(94, 255, 255, 1) 5%, rgba(24, 75, 140, 1) 90%);*/
 		border: 5px solid #FFFFFF;
 		color: #FFFFFF;
 		font-family: 'Bakbak One';
