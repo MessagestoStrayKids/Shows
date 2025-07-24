@@ -1,5 +1,4 @@
 
-
 	@supports not (-webkit-touch-callout: none) {
 	  /* CSS for other than iOS devices */ 
 		body {
@@ -49,7 +48,7 @@
 		}
 	h1 {
 		text-align: center;
-		background: url("https://i.ibb.co/GQm3tyY4/Screenshot-20250606-121331-X.jpg"); 
+		background: url("https://i.ibb.co/6c7c6PQG/Gwo-ZJLia-YAAp-B0w.jpg"); 
 		background-size:100% 100%;
 		border: 5px solid #FFFFFF;
 		color: #FFFFFF;
@@ -58,7 +57,7 @@
 		font-size: 56px;
 		}
 	h2 {		
-		border-image:  url("https://i.ibb.co/GQm3tyY4/Screenshot-20250606-121331-X.jpg") 100 Stretch;
+		border-image:  url("https://i.ibb.co/6c7c6PQG/Gwo-ZJLia-YAAp-B0w.jpg") 100 Stretch;
 		border-bottom: 4px solid transparent;
 		border-top: 4px solid transparent;
 		border-left: 4px solid transparent;
@@ -79,7 +78,7 @@
 		text-align: center;
 		}*/
 	h4 {
-		border-image:  url("https://i.ibb.co/GQm3tyY4/Screenshot-20250606-121331-X.jpg") 100 Stretch;
+		border-image:  url("https://i.ibb.co/6c7c6PQG/Gwo-ZJLia-YAAp-B0w.jpg") 100 Stretch;
 		border-bottom: 3px solid transparent;
 		background: #000000;
 		color: #FFFFFF;
@@ -89,12 +88,12 @@
 		text-align: left;
 		}
 	h5 {
-		background: url("https://i.ibb.co/GQm3tyY4/Screenshot-20250606-121331-X.jpg"); /*color: rgba(24, 75, 140, 1);*/
+		background: url("https://i.ibb.co/6c7c6PQG/Gwo-ZJLia-YAAp-B0w.jpg"); /*color: rgba(24, 75, 140, 1);*/
 		background-size: cover;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		
-		text-align: left;
+		text-align: center;
 		font-family: 'Bakbak One';
 		font-size: 20px;
 		}
@@ -103,6 +102,9 @@
 		  background-color: black;
 		}
 
+details > summary {
+	margin-left: 100px;
+}
 		table {
 		border-collapse: seperate;
 		border-spacing: 0px;
@@ -149,7 +151,7 @@
 		}
 
 		mark {
-		background: url("https://i.ibb.co/GQm3tyY4/Screenshot-20250606-121331-X.jpg");
+		background: url("https://i.ibb.co/6c7c6PQG/Gwo-ZJLia-YAAp-B0w.jpg");
 		background-size: cover;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
@@ -157,8 +159,18 @@
 		font-size: 18px;
 		}
 
+		s {
+		background: url("https://i.ibb.co/spjvGKxS/channels4-profile.jpg");
+		background-size: cover;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-family: 'Bakbak One';
+		font-size: 18px;
+		text-decoration: none;
+		}
+
 		input[type='checkbox'] {
-		accent-color: rgba(31, 58, 15, 1);
+		accent-color: rgba(29, 74, 191, 1);
 		transform : scale(1.5);
 		margin-right: 8%;
 		margin-top: 3%;
@@ -166,7 +178,7 @@
 		}
 
 		.dropbtn {
-		  background: url("https://i.ibb.co/GQm3tyY4/Screenshot-20250606-121331-X.jpg");
+		  background: url("https://i.ibb.co/6c7c6PQG/Gwo-ZJLia-YAAp-B0w.jpg");
 		background-size: cover;
 		  color: white;
 		  font-family: 'Bakbak One';
@@ -223,7 +235,7 @@
 		
 		.button-85:before {
 		  content: "";
-		 background: url("https://i.ibb.co/GQm3tyY4/Screenshot-20250606-121331-X.jpg");
+		 background: url("https://i.ibb.co/6c7c6PQG/Gwo-ZJLia-YAAp-B0w.jpg");
 		background-size: cover;
 		  position: absolute;
 		  top: -2px;
