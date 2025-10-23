@@ -136,9 +136,6 @@
 			
 <base target="_blank">	
 			<br>	
-<form name="f1" action="" 
-    onSubmit="if(this.t1.value!=null && this.t1.value!='') findString(this.t1.value);return false">
-    <input id="searcher" type="text" name="searcher">
 	
 <script language="JavaScript">
 <!--
@@ -182,22 +179,16 @@ function findString (str) {
 }
 //-->
 </script>
-	<style>
-		* {
-  /* Reset browser's padding and margin */
-  margin:30;
-  padding: 30;
-  box-sizing: border-box; 
-}
-
-body {
-  background: #ffffff;
-}
-
-input[type=text] {
-  border: 2px solid green;
-  border-radius: 4px;
-}	</style>	<br>
+</head>
+<body>
+<form name="f1" action="" 
+    onSubmit="if(this.t1.value!=null && this.t1.value!='') findString(this.t1.value);return false">
+    <input type="text" name=t1 value="" size=20>
+    <input type="submit" name=b1 value="find">
+    <p>This is some sample text, do a search above to see how the search bar functions.
+You can now add your own CSS styling.
+</p>
+</form>	<br>
 
 				
 <div class="dropdown">
