@@ -138,96 +138,80 @@
 			<br>	
 
     <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search page...">
-        <button id="searchButton">Search</button>
-    </div>
+  <input type="text" id="searchInput" placeholder="Find on page...">
+  <span id="searchStatus"></span>
+</div>
 
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const searchInput = document.getElementById('searchInput');
-            const searchButton = document.getElementById('searchButton');
-            const body = document.body;
-            let lastSearchTerm = '';
-            let previousHighlights = [];
+				<style>
+      document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('searchInput');
+  const content = document.getElementById('content');
+  const searchStatus = document.getElementById('searchStatus');
+  let originalContent = content.innerHTML;
 
-            // Function to un-highlight all previously highlighted text
-            function unhighlight() {
-                previousHighlights.forEach(span => {
-                    const parent = span.parentNode;
-                    parent.replaceChild(document.createTextNode(span.textContent), span);
-                    parent.normalize(); // Merges adjacent text nodes
-                });
-                previousHighlights = [];
-            }
+  searchInput.addEventListener('input', () => {
+    const searchTerm = searchInput.value.trim();
+    
+    // Clear previous highlights and reset to original content
+    content.innerHTML = originalContent;
+    searchStatus.textContent = '';
 
-            // Function to find and highlight text
-            function highlight(text) {
-                if (!text) return;
+    if (searchTerm === '') {
+      return;
+    }
 
-                unhighlight(); // Remove old highlights before creating new ones
+    let count = 0;
+    const regex = new RegExp(searchTerm, 'gi'); // 'g' for global, 'i' for case-insensitive
+    const matches = originalContent.match(regex);
+    
+    if (matches) {
+      count = matches.length;
+      const highlightedContent = originalContent.replace(
+        regex,
+        (match) => `<span class="highlight">${match}</span>`
+      );
+      content.innerHTML = highlightedContent;
+      searchStatus.textContent = `${count} matches found.`;
+    } else {
+      searchStatus.textContent = '0 matches found.';
+    }
+  });
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('searchInput');
+  const content = document.getElementById('content');
+  const searchStatus = document.getElementById('searchStatus');
+  let originalContent = content.innerHTML;
 
-                const regex = new RegExp(text, 'gi');
-                const walker = document.createTreeWalker(body, NodeFilter.SHOW_TEXT, null, false);
-                const nodesToHighlight = [];
+  searchInput.addEventListener('input', () => {
+    const searchTerm = searchInput.value.trim();
+    
+    // Clear previous highlights and reset to original content
+    content.innerHTML = originalContent;
+    searchStatus.textContent = '';
 
-                let node;
-                while ((node = walker.nextNode())) {
-                    // Skip text inside script and style tags
-                    if (node.parentNode.tagName !== 'SCRIPT' && node.parentNode.tagName !== 'STYLE') {
-                        let match;
-                        while ((match = regex.exec(node.nodeValue))) {
-                            nodesToHighlight.push({
-                                node: node,
-                                start: match.index,
-                                end: match.index + match[0].length
-                            });
-                        }
-                    }
-                }
+    if (searchTerm === '') {
+      return;
+    }
 
-                // Apply highlights in reverse order to not interfere with indices
-                nodesToHighlight.reverse().forEach(match => {
-                    const textNode = match.node;
-                    const textContent = textNode.nodeValue;
-                    const start = match.start;
-                    const end = match.end;
-
-                    const before = document.createTextNode(textContent.substring(0, start));
-                    const middle = document.createElement('span');
-                    middle.className = 'highlighted';
-                    middle.textContent = textContent.substring(start, end);
-                    const after = document.createTextNode(textContent.substring(end));
-
-                    const parent = textNode.parentNode;
-                    parent.replaceChild(after, textNode);
-                    parent.insertBefore(middle, after);
-                    parent.insertBefore(before, middle);
-
-                    previousHighlights.push(middle);
-                });
-            }
-
-            // Event listener for the search button
-            searchButton.addEventListener('click', () => {
-                const searchTerm = searchInput.value.trim();
-                if (searchTerm !== lastSearchTerm) {
-                    highlight(searchTerm);
-                    lastSearchTerm = searchTerm;
-                }
-            });
-
-            // Event listener for the Enter key in the search input
-            searchInput.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter') {
-                    const searchTerm = searchInput.value.trim();
-                    if (searchTerm !== lastSearchTerm) {
-                        highlight(searchTerm);
-                        lastSearchTerm = searchTerm;
-                    }
-                }
-            });
-        });
-    </script><br>
+    let count = 0;
+    const regex = new RegExp(searchTerm, 'gi'); // 'g' for global, 'i' for case-insensitive
+    const matches = originalContent.match(regex);
+    
+    if (matches) {
+      count = matches.length;
+      const highlightedContent = originalContent.replace(
+        regex,
+        (match) => `<span class="highlight">${match}</span>`
+      );
+      content.innerHTML = highlightedContent;
+      searchStatus.textContent = `${count} matches found.`;
+    } else {
+      searchStatus.textContent = '0 matches found.';
+    }
+  });
+});
+			</style><br>
 
 				
 <div class="dropdown">
