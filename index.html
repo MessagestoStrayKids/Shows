@@ -137,80 +137,38 @@
 <base target="_blank">	
 			<br>	
 
-    <div class="search-container">
-  <input type="text" id="searchInput" placeholder="Find on page...">
-  <span id="searchStatus"></span>
-</div>
+    <input id="searcher" type="text" name="searcher">
 
 				<style>
-      document.addEventListener('DOMContentLoaded', () => {
-  const searchInput = document.getElementById('searchInput');
-  const content = document.getElementById('content');
-  const searchStatus = document.getElementById('searchStatus');
-  let originalContent = content.innerHTML;
-
-  searchInput.addEventListener('input', () => {
-    const searchTerm = searchInput.value.trim();
-    
-    // Clear previous highlights and reset to original content
-    content.innerHTML = originalContent;
-    searchStatus.textContent = '';
-
-    if (searchTerm === '') {
-      return;
+     $('#searcher').quicksearch('table tbody tr', {
+    'delay': 100,
+    'bind': 'keyup keydown',
+    'show': function() {
+        if ($('#searcher').val() === '') {
+            return;
+        }
+        $(this).addClass('show');
+    },
+    'onAfter': function() {
+        if ($('#searcher').val() === '') {
+            return;
+        }
+        if ($('.show:first').length > 0){
+            $('html,body').scrollTop($('.show:first').offset().top);
+        }
+    },
+    'hide': function() {
+        $(this).removeClass('show');
+    },
+    'prepareQuery': function(val) {
+        return new RegExp(val, "i");
+    },
+    'testQuery': function(query, txt, _row) {
+        return query.test(txt);
     }
-
-    let count = 0;
-    const regex = new RegExp(searchTerm, 'gi'); // 'g' for global, 'i' for case-insensitive
-    const matches = originalContent.match(regex);
-    
-    if (matches) {
-      count = matches.length;
-      const highlightedContent = originalContent.replace(
-        regex,
-        (match) => `<span class="highlight">${match}</span>`
-      );
-      content.innerHTML = highlightedContent;
-      searchStatus.textContent = `${count} matches found.`;
-    } else {
-      searchStatus.textContent = '0 matches found.';
-    }
-  });
 });
-document.addEventListener('DOMContentLoaded', () => {
-  const searchInput = document.getElementById('searchInput');
-  const content = document.getElementById('content');
-  const searchStatus = document.getElementById('searchStatus');
-  let originalContent = content.innerHTML;
 
-  searchInput.addEventListener('input', () => {
-    const searchTerm = searchInput.value.trim();
-    
-    // Clear previous highlights and reset to original content
-    content.innerHTML = originalContent;
-    searchStatus.textContent = '';
-
-    if (searchTerm === '') {
-      return;
-    }
-
-    let count = 0;
-    const regex = new RegExp(searchTerm, 'gi'); // 'g' for global, 'i' for case-insensitive
-    const matches = originalContent.match(regex);
-    
-    if (matches) {
-      count = matches.length;
-      const highlightedContent = originalContent.replace(
-        regex,
-        (match) => `<span class="highlight">${match}</span>`
-      );
-      content.innerHTML = highlightedContent;
-      searchStatus.textContent = `${count} matches found.`;
-    } else {
-      searchStatus.textContent = '0 matches found.';
-    }
-  });
-});
+$('#searcher').focus();
 			</style><br>
 
 				
