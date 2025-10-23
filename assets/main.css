@@ -1,38 +1,32 @@
- .search-container {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            z-index: 1000;
-            background-color: #f0f0ff;
-            border: 5px solid rgb(255, 183, 206);
-            padding: 8px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+ $('#searcher').quicksearch('table tbody tr', {
+    'delay': 100,
+    'bind': 'keyup keydown',
+    'show': function() {
+        if ($('#searcher').val() === '') {
+            return;
         }
+        $(this).addClass('show');
+    },
+    'onAfter': function() {
+        if ($('#searcher').val() === '') {
+            return;
+        }
+        if ($('.show:first').length > 0){
+            $('html,body').scrollTop($('.show:first').offset().top);
+        }
+    },
+    'hide': function() {
+        $(this).removeClass('show');
+    },
+    'prepareQuery': function(val) {
+        return new RegExp(val, "i");
+    },
+    'testQuery': function(query, txt, _row) {
+        return query.test(txt);
+    }
+});
 
-        .search-container input {
-            border: 1px solid #ddd;
-            padding: 5px;
-            border-radius: 3px;
-        }
-        
-        .search-container button {
-            background-color: rgb(255, 183, 206);
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-
-        .search-container button:hover {
-            background-color: #0056b3;
-        }
-
-        .highlighted {
-            background-color: yellow;
-            font-weight: bold;
-        }
+$('#searcher').focus();
 
 	@supports not (-webkit-touch-callout: none) {
 	  /* CSS for other than iOS devices */ 
